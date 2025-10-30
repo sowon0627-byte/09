@@ -5,21 +5,19 @@
 
 int main(void)
 {
-    int grade[SIZE];
     int i;
-    int sum = 0;
-    
-    // 점수 입력 // 
+    int grade[SIZE];
+    int score[SIZE];
+     
     for(i=0;i<SIZE;i++)
-    {
-       printf("enter student grade: ");
-       scanf("%d", &grade[i]);
-       sum = sum+grade[i];
-    }
+       grade[i] = rand() % 100;
+       
+    for(i=0;i<SIZE;i++)
+       score[i] = grade[i];
     
-    // 점수 출력 // 
-    printf("average is %d\n", sum / SIZE);
-  
+    for(i=0;i<SIZE;i++)
+       printf("grade[%d] = %d, score[%d] = %d\n", i, grade[i], i, score[i]); 
+ 
   system("PAUSE");	
   return 0;
 }
